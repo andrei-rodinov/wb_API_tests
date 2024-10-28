@@ -6,10 +6,7 @@ import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 
 import static io.restassured.RestAssured.given;
@@ -19,6 +16,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 @Epic("API WBTechSchool")
 @Feature("Тестирование API заявки на удаление профиля")
 @DisplayName("Тест № 3: Создание заявки на удаление / Отмена заявки на удаление")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class DeleteRequestTests {
 
